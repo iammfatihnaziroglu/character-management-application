@@ -5,9 +5,10 @@ type Character = GetCharactersQuery['characters'][number];
 
 type CharacterCardProps = {
   character: Character;
+  priority?: boolean;
 };
 
-export function CharacterCard({ character }: CharacterCardProps) {
+export function CharacterCard({ character, priority }: CharacterCardProps) {
   return (
     <article className="flex flex-col overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
       <div className="relative aspect-square w-full bg-zinc-100 dark:bg-zinc-800">
@@ -15,6 +16,7 @@ export function CharacterCard({ character }: CharacterCardProps) {
           src={character.image}
           alt={character.name}
           fill
+          priority={priority}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover"
         />
