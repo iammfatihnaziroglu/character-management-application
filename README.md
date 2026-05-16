@@ -1,6 +1,6 @@
 # Character Management Application
 
-Full-stack **Character Management Application** built with **Next.js** (frontend) and **NestJS** (backend). The app uses **GraphQL** end-to-end so users can view and filter characters by status, gender, and text search on name and description.
+Fullstack **Character Management Application** built with **Next.js** (frontend) and **NestJS** (backend). The app uses **GraphQL** end-to-end so users can view and filter characters by status, gender, and text search on name and description.
 
 ## Project overview
 
