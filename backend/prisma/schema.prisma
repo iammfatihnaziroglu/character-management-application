@@ -1,11 +1,10 @@
 generator client {
-  provider     = "prisma-client"
-  output       = "../generated/prisma"
-  moduleFormat = "cjs"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
 enum CharacterStatus {
@@ -21,7 +20,7 @@ enum CharacterGender {
 }
 
 model Character {
-  id          String           @id @default(uuid())
+  id          String          @id @default(uuid())
   image       String
   name        String
   status      CharacterStatus

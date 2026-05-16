@@ -87,7 +87,7 @@ User → Filter UI (nuqs) → URL params
 
 ### Prerequisites
 
-- Node.js 20+
+- **Node.js 20 LTS** (recommended)
 - npm
 
 ### 1. Backend

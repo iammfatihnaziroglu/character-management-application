@@ -2,7 +2,7 @@ import { Field, InputType } from '@nestjs/graphql';
 import {
   CharacterGender,
   CharacterStatus,
-} from '../../../generated/prisma/client';
+} from '@prisma/client';
 
 @InputType()
 export class CharacterFilterInput {

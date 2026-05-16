@@ -2,7 +2,7 @@ import { Field, ID, ObjectType, registerEnumType } from '@nestjs/graphql';
 import {
   CharacterGender,
   CharacterStatus,
-} from '../../generated/prisma/client';
+} from '@prisma/client';
 
 registerEnumType(CharacterStatus, { name: 'CharacterStatus' });
 registerEnumType(CharacterGender, { name: 'CharacterGender' });

@@ -1,10 +1,8 @@
-import 'dotenv/config';
-import { PrismaBetterSqlite3 } from '@prisma/adapter-better-sqlite3';
 import {
   CharacterGender,
   CharacterStatus,
   PrismaClient,
-} from '../generated/prisma/client';
+} from '@prisma/client';
 
 /**
  * image alanı yalnızca harici URL (string) tutar — upload / dosya depolama yok.
@@ -13,11 +11,7 @@ import {
 const avatar = (apiCharacterId: number) =>
   `https://rickandmortyapi.com/api/character/avatar/${apiCharacterId}.jpeg`;
 
-const adapter = new PrismaBetterSqlite3({
-  url: process.env.DATABASE_URL ?? 'file:./dev.db',
-});
-
-const prisma = new PrismaClient({ adapter });
+const prisma = new PrismaClient();
 
 const characters = [
   {
